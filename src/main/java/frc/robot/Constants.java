@@ -12,4 +12,12 @@ package frc.robot;
  * <p>It is advised to statically import this class (or one of its inner classes) wherever the
  * constants are needed, to reduce verbosity.
  */
-public final class Constants {}
+public final class Constants {
+        public static final double HOOD_SPEED = 0.1;
+        public static final double HOOD_GEAR_RATIO = 340.0;
+        public static final double COUNTS_PER_DEGREE = (HOOD_GEAR_RATIO) / 360.0;
+        public static final double HOOD_ANGLE_TOLERANCE = 0.5;
+        public static final double MAX_HOOD_ANGLE = 40.0;
+
+    
+}
