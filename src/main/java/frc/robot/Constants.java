@@ -42,6 +42,11 @@ public final class Constants {
     public static final double ENCODER_RESOLUTION = 12.0;
     public static final double QUAD_FACTOR = 4.0; // quadrature encoder factor
     public static final double MAX_RPM = 1425.0;
+
+
+
+    public static final double NECK_UP_SPEED = 0.75;
+    public static final double NECK_DOWN_SPEED = -0.5;
     
 
 }
