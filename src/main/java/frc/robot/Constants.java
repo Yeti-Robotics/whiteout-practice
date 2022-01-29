@@ -14,6 +14,7 @@ package frc.robot;
  */
 public final class Constants {
 
+
     public static final double HOOD_SPEED = 0.1;
     public static final double HOOD_GEAR_RATIO = 340.0;
     public static final double COUNTS_PER_DEGREE = (HOOD_GEAR_RATIO) / 360.0;
@@ -28,4 +29,21 @@ public final class Constants {
     public final static double CLIMBER_SPEED = 23.0;
     public final static int CLIMBER_TOLERANCE = 5;
 
+
+
+    public static final int SHOOTER_LEFT_MOTOR = 9; //left
+    public static final int SHOOTER_RIGHT_MOTOR = 10; //right  
+    public static final double SHOOT_1_SPEED = .9;
+    public static final double SHOOT_2_SPEED = .9;
+    public static final double REVERSE_SHOOT_1_SPEED = -0.5;
+    public static final double REVERSE_SHOOT_2_SPEED = -0.5;
+    public static final double PULLEY_RATIO = 12.0 / 48.0;
+    public static final double ENCODER_TIME_CONVERSION = 600.0; // 100 ms per minute
+    public static final double ENCODER_RESOLUTION = 12.0;
+    public static final double QUAD_FACTOR = 4.0; // quadrature encoder factor
+    public static final double MAX_RPM = 1425.0;
+    
+
 }
+
+
