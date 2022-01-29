@@ -13,11 +13,19 @@ package frc.robot;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-        public static final double HOOD_SPEED = 0.1;
-        public static final double HOOD_GEAR_RATIO = 340.0;
-        public static final double COUNTS_PER_DEGREE = (HOOD_GEAR_RATIO) / 360.0;
-        public static final double HOOD_ANGLE_TOLERANCE = 0.5;
-        public static final double MAX_HOOD_ANGLE = 40.0;
+
+    public static final double HOOD_SPEED = 0.1;
+    public static final double HOOD_GEAR_RATIO = 340.0;
+    public static final double COUNTS_PER_DEGREE = (HOOD_GEAR_RATIO) / 360.0;
+    public static final double HOOD_ANGLE_TOLERANCE = 0.5;
+    public static final double MAX_HOOD_ANGLE = 40.0;
 
     
+
+    public final static int LEFT_CLIMBER_FALCON = 0; //placeholder
+    public final static int RIGHT_CLIMBER_FALCON = 1;//placeholder
+    public final static int[] BRAKE_CLIMBER_SOLENOID = {3, 4};//placeholder
+    public final static double CLIMBER_SPEED = 23.0;
+    public final static int CLIMBER_TOLERANCE = 5;
+
 }
