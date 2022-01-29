@@ -2,17 +2,17 @@
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
 
-package frc.robot.commands;
+package frc.robot.commands.hood;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.Constants;
 import frc.robot.subsystems.HoodSubsystem;
 
-public class HoodInCommand extends CommandBase {
+public class HoodOutCommand extends CommandBase {
   private HoodSubsystem hoodSubsystem; 
   
   /** Creates a new HoodIn. */
-  public HoodInCommand(HoodSubsystem hoodSubsystem) {
+  public HoodOutCommand(HoodSubsystem hoodSubsystem) {
     this.hoodSubsystem = new HoodSubsystem();
     addRequirements(hoodSubsystem);
   }
@@ -23,13 +23,15 @@ public class HoodInCommand extends CommandBase {
   @Override
   public void execute() {
     if(!(hoodSubsystem.getEncoder() -Constants.HOOD_ANGLE_TOLERANCE >= Constants.MAX_HOOD_ANGLE)){
-      hoodSubsystem.movehood(Constants.HOOD_SPEED);
+      hoodSubsystem.movehood(-Constants.HOOD_SPEED);
     }
   }
 
   // Called once the command ends or is interrupted.
   @Override
-  public void end(boolean interrupted) {}
+  public void end(boolean interrupted) {
+    hoodSubsystem.stophood(0);
+  }
 
   // Returns true when the command should end.
   @Override

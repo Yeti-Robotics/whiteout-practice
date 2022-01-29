@@ -2,19 +2,25 @@
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
 
-package frc.robot.commands;
+package frc.robot.commands.hood;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.subsystems.HoodSubsystem;
 
-public class ClimberDownCommand extends CommandBase {
-  /** Creates a new ClimberDownCommand. */
-  public ClimberDownCommand() {
+public class ResetHoodEncoderCommand extends CommandBase {
+  private HoodSubsystem hoodSubsystem;
+  /** Creates a new ResetHoodEncoderCommand. */
+  public ResetHoodEncoderCommand() {
+    this.hoodSubsystem = new HoodSubsystem();
+    addRequirements(hoodSubsystem);
     // Use addRequirements() here to declare subsystem dependencies.
   }
 
   // Called when the command is initially scheduled.
   @Override
-  public void initialize() {}
+  public void initialize() {  
+    this.hoodSubsystem.resetEncoder();
+  }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
